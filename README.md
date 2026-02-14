@@ -62,4 +62,5 @@ It provides a custom shell interface to interact with files using standard syste
 
 ## 👨‍💻 Author
 **Soham Sachin Sonar**
-* [GitHub](https://github.com/soham-exe)
+-   [GitHub](https://github.com/soham-exe)
+-   [LinkedIn](https://www.google.com/search?q=https://linkedin.com/in/soham-sonar-a98400251)
