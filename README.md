@@ -48,7 +48,7 @@ It provides a custom shell interface to interact with files using standard syste
 
 2.  **Compile the code**
     ```bash
-    g++ src/cvfs.c -o cvfs
+    g++ src\CVFS.cpp -o cvfs
     ```
 
 3.  **Run the application**
