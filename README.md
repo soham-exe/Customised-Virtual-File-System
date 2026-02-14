@@ -42,8 +42,8 @@ It provides a custom shell interface to interact with files using standard syste
 ## ⚙️ How to Run
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/soham-exe/CVFS-Project.git](https://github.com/soham-exe/CVFS-Project.git)
-    cd CVFS-Project
+    git clone https://github.com/soham-exe/Customised-Virtual-File-System.git
+    cd Customised-Virtual-File-System
     ```
 
 2.  **Compile the code**
