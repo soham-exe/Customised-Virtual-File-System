@@ -42,7 +42,7 @@ It provides a custom shell interface to interact with files using standard syste
 ## ⚙️ How to Run
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/CVFS-Project.git](https://github.com/YOUR_USERNAME/CVFS-Project.git)
+    git clone [https://github.com/soham-exe/CVFS-Project.git](https://github.com/soham-exe/CVFS-Project.git)
     cd CVFS-Project
     ```
 
