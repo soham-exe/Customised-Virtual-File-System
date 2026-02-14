@@ -1,0 +1,10 @@
+# Ignore executables
+*.exe
+*.out
+cvfs
+
+# Ignore object files
+*.o
+
+# Ignore system files
+.DS_Store

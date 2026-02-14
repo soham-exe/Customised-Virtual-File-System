@@ -1,0 +1,221 @@
+COMMAND=man
+NAME
+       man - an interface to the system reference manuals
+
+SYNOPSIS
+       man [command_name]
+
+DESCRIPTION
+       man is the system's manual pager. Each page argument given to man is
+       the name of a command, utility or function.
+
+       The manual page associated with each of these arguments is then found
+       and displayed.
+
+EXAMPLES
+       man ls
+           Display the manual page for the ls command.
+END
+
+COMMAND=ls
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls
+
+DESCRIPTION
+       List information about the files in the current directory (the Virtual
+       File System).
+
+       For each file, it displays the Inode Number, File Name, and Actual
+       File Size.
+
+EXAMPLES
+       ls
+           Lists all files currently created in the system.
+END
+
+COMMAND=clear
+NAME
+       clear - clear the terminal screen
+
+SYNOPSIS
+       clear
+
+DESCRIPTION
+       clear clears your screen if this is possible, including its scrollback
+       buffer. It looks up the terminal type in the environment and then
+       calls the system command to clear the screen.
+END
+
+COMMAND=exit
+NAME
+       exit - cause the shell to exit
+
+SYNOPSIS
+       exit
+
+DESCRIPTION
+       The exit command terminates the Custom Virtual File System (CVFS)
+       session.
+
+       Before exiting, it releases all allocated resources, including Inodes
+       and memory buffers, ensuring a clean shutdown.
+END
+
+COMMAND=creat
+NAME
+       creat - open and possibly create a file
+
+SYNOPSIS
+       creat [file_name] [permission]
+
+DESCRIPTION
+       creat() attempts to create a file with the specified name and per‐
+       mission mode.
+
+       If the file already exists, an error is returned. If successful, it re‐
+       turns a non-negative integer termed a file descriptor.
+
+OPTIONS
+       permission
+           The permission mode for the new file:
+           1  Read permissions only.
+           2  Write permissions only.
+           3  Read and Write permissions.
+
+EXAMPLES
+       creat Demo.txt 3
+           Creates a file named Demo.txt with Read & Write permissions.
+END
+
+COMMAND=read
+NAME
+       read - read from a file descriptor
+
+SYNOPSIS
+       read [file_descriptor] [bytes_to_read]
+
+DESCRIPTION
+       read() attempts to read up to count bytes from file descriptor fd
+       into the buffer.
+
+       On success, the number of bytes read is returned, and the file position
+       is advanced by this number.
+
+EXAMPLES
+       read 3 10
+           Reads 10 bytes from the file associated with File Descriptor 3.
+END
+
+COMMAND=write
+NAME
+       write - write to a file descriptor
+
+SYNOPSIS
+       write [file_descriptor] [bytes_to_write]
+
+DESCRIPTION
+       write() writes up to count bytes from the buffer to the file referred
+       to by the file descriptor fd.
+
+       The number of bytes written may be less than count if there is
+       insufficient space in the underlying file system.
+
+EXAMPLES
+       write 3 5
+           Writes 5 bytes to the file associated with File Descriptor 3.
+END
+
+COMMAND=unlink
+NAME
+       unlink - delete a name and possibly the file it refers to
+
+SYNOPSIS
+       unlink [file_name]
+
+DESCRIPTION
+       unlink() deletes a name from the filesystem. If that name was the last
+       link to a file and no processes have the file open, the file is de‐
+       leted and the space it was using is made available for reuse.
+
+EXAMPLES
+       unlink Demo.txt
+           Deletes the file named Demo.txt.
+END
+
+COMMAND=lseek
+NAME
+       lseek - reposition read/write file offset
+
+SYNOPSIS
+       lseek [file_descriptor] [offset] [whence]
+
+DESCRIPTION
+       lseek() repositions the file offset of the open file descriptor fd to
+       the argument offset according to the directive whence.
+
+OPTIONS
+       whence
+           0  (START) The file offset is set to offset bytes.
+           1  (CURRENT) The file offset is set to its current location plus
+              offset bytes.
+           2  (END) The file offset is set to the size of the file plus off‐
+              set bytes.
+
+EXAMPLES
+       lseek 3 0 0
+           Resets the cursor of File Descriptor 3 to the beginning of the
+           file (START).
+END
+
+COMMAND=stat
+NAME
+       stat - display file status
+
+SYNOPSIS
+       stat [file_name]
+
+DESCRIPTION
+       stat() displays detailed statistics and metadata about a file refer‐
+       enced by its name.
+
+       Information includes the File Name, Inode Number, File Size, Link
+       Count, and Permissions.
+
+EXAMPLES
+       stat Demo.txt
+           Shows metadata for the file Demo.txt.
+END
+
+COMMAND=fstat
+NAME
+       fstat - display file status by descriptor
+
+SYNOPSIS
+       fstat [file_descriptor]
+
+DESCRIPTION
+       fstat() is identical to stat(), except that the file about which infor‐
+       mation is to be retrieved is specified by the file descriptor fd.
+
+EXAMPLES
+       fstat 3
+           Shows metadata for the file open at File Descriptor 3.
+END
+
+COMMAND=help
+NAME
+       help - display information about builtin commands
+
+SYNOPSIS
+       help
+
+DESCRIPTION
+       Display brief summaries of builtin commands.
+
+EXAMPLES
+       help
+           Lists all available commands in the CVFS shell.
+END
